@@ -164,7 +164,7 @@ class _CustomLoginState extends State<CustomLogin>
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (context) =>Homepage()
+                                                  builder: (context) =>RecyclingHomePage()
                                                      ));
                                         }
                                       });
@@ -178,7 +178,7 @@ class _CustomLoginState extends State<CustomLogin>
                               Button(
                                 text: 'Login',
                                 onPressed: () {
-                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Homepage()));
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>RecyclingHomePage()));
                                 },
                               )
                             ],
@@ -237,7 +237,7 @@ class _CustomLoginState extends State<CustomLogin>
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Homepage()));
+                                                      RecyclingHomePage()));
                                         }
                                       });
                                     },
@@ -250,7 +250,7 @@ class _CustomLoginState extends State<CustomLogin>
                               GestureDetector(
                                   child: Button(
                                 text: 'Login',
-                                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> Homepage()));},
+                                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> RecyclingHomePage()));},
                               ))
                             ],
                           ),

@@ -17,7 +17,7 @@ class Button extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Colors.teal,
+        color: Color.fromRGBO(42, 183, 199, 1),
       ),
       height: 6.5.h,
       width: screenWidth * 0.9,
