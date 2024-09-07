@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rejunx/auth/login.dart';
 import 'package:rejunx/help.dart';
 import 'package:sizer/sizer.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
             useMaterial3: true,
           ),
-          home: Help(),
+          home: CustomLogin(),
         );
       },
     );
