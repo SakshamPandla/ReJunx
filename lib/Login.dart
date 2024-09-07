@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:local_auth/local_auth.dart';
-import 'package:rejunx/recycleloc.dart';
+import 'package:rejunx/homepage.dart';
 import 'package:sizer/sizer.dart';
 
 class Login extends StatefulWidget {
@@ -204,7 +204,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RecyclingHomePage()), // Navigating to RecycleLoc
+                  MaterialPageRoute(builder: (context) => RecyclingApp()), // Navigating to RecycleLoc
                 );
               },
               child: Text(

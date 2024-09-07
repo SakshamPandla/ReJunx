@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
       } else {
         Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (context) => Homepage()), // Go to Homepage
+          MaterialPageRoute(builder: (context) => RecyclingApp()), // Go to Homepage
               (route) => false,
         );
       }

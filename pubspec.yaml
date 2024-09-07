@@ -72,6 +72,8 @@ flutter:
 
   assets:
     - assets/images/ReJunx logo.png
+    - assets/images/ImactsEW1.jpg
+    - assets/images/ImpactEW2.jpg
 
   #   - images/a_dot_ham.jpeg
 
