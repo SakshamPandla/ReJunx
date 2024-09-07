@@ -51,11 +51,11 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Center(child: Text("Login", style: TextStyle(color: Color.fromRGBO(23, 202, 185, 1.0), fontWeight: FontWeight.bold, fontSize: 35))),
+          child: Center(child: Text("Login", style: TextStyle(color: Color.fromRGBO(42, 183, 199, 1), fontWeight: FontWeight.bold, fontSize: 35))),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData(color: Color.fromRGBO(23, 202, 185, 1.0)), // Change app bar icon color
+        iconTheme: IconThemeData(color: Color.fromRGBO(42, 183, 199, 1)), // Change app bar icon color
       ),
       body: Stack(
         children: [
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                       indicatorSize: TabBarIndicatorSize.tab,
                       indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Color.fromRGBO(23, 202, 185, 1.0), // Consistent blue color
+                        color: Color.fromRGBO(42, 183, 199, 1), // Consistent blue color
                       ),
                       tabs: const [
                         Tab(text: 'Phone Number'),
@@ -177,7 +177,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                   style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
                 ),
                 CupertinoSwitch(
-                  activeColor: Color.fromRGBO(23, 202, 185, 1.0), // Same blue for the switch
+                  activeColor: Color.fromRGBO(42, 183, 199, 1), // Same blue for the switch
                   value: switchcust,
                   onChanged: (value) async {
                     isBiometric = await authenticateWithBiometric();
@@ -194,7 +194,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
             SizedBox(height: 5.h),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(23, 202, 185, 1.0), // Same blue color for the login button
+                backgroundColor: Color.fromRGBO(42, 183, 199, 1), // Same blue color for the login button
                 padding: EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 24.w),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),

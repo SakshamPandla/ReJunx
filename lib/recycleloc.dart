@@ -20,10 +20,11 @@ class RecyclingApp extends StatelessWidget {
 }
 
 class RecyclingHomePage extends StatelessWidget {
-  final Color primaryColor = Color(0xFF17CAB9);
+  final Color primaryColor = Color.fromRGBO(42, 183, 199, 1);
   final Color secondaryColor = Color.fromRGBO(42, 183, 199, 1);
   final Color backgroundColor = Color.fromRGBO(240, 248, 255, 1);
-  final Color boxColor = Color.fromRGBO(210, 240, 255, 1);
+  final Color boxColor = Color.fromRGBO(42, 183, 199, 1);
+  final Color cardColor = Color.fromRGBO(42, 183, 199, 1); // New color code
 
   @override
   Widget build(BuildContext context) {
@@ -72,8 +73,8 @@ class RecyclingHomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  statisticsCard('3400', 'RX Points', primaryColor),
-                  statisticsCard('27', 'Products', secondaryColor),
+                  statisticsCard('3400', 'RX Points', cardColor),
+                  statisticsCard('27', 'Products', cardColor),
                 ],
               ),
               SizedBox(height: 2.h),
@@ -138,7 +139,7 @@ class RecyclingHomePage extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return nearbyBinStation(primaryColor);
+                    return nearbyBinStation(cardColor);
                   },
                 ),
               ),
@@ -165,12 +166,12 @@ class RecyclingHomePage extends StatelessWidget {
               style: TextStyle(
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                  color: Colors.white), // Updated to white
             ),
             SizedBox(height: 1.h),
             Text(
               label,
-              style: TextStyle(fontSize: 12.sp, color: Colors.black54),
+              style: TextStyle(fontSize: 12.sp, color: Colors.white), // Updated to white
             ),
           ],
         ),
@@ -237,9 +238,9 @@ class RecyclingHomePage extends StatelessWidget {
               height: 15.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: color.withOpacity(0.2),
+                color: color, // Updated to cardColor
               ),
-              child: Icon(Icons.location_on, size: 20.sp, color: color),
+              child: Icon(Icons.location_on, size: 20.sp, color: Colors.white), // Updated to white
             ),
             SizedBox(width: 4.w),
             Column(
