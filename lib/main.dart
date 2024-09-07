@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:rejunx/auth/login.dart';
 import 'package:rejunx/help.dart';
 import 'package:rejunx/splash.dart';
 import 'package:rejunx/utils/bottombar.dart';
+import 'package:rejunx/utils/gemini.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
             useMaterial3: true,
           ),
-          home: Bottombar(),
+          home: GeminiModelChat(),
         );
       },
     );
