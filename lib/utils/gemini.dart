@@ -30,6 +30,11 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
   }
 
   Future<void> generate() async {
+    // Show "Response loading..." immediately after the button is pressed
+    setState(() {
+      _response = 'Response loading...';
+    });
+
     try {
       final prompt = [
         Content.text(
@@ -39,7 +44,7 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
                 "Condition: ${_conditionController.text}\n"
                 "Working: ${_workingController.text}\n"
                 "Should I recycle this item? Yes or No\n"
-                "Just give 5 lines answers"
+                "Just give 3 lines answers"
         )
       ];
       final response = await model.generateContent(prompt);
@@ -55,18 +60,45 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Worth Recycling?'),),
+    return Scaffold(
+      appBar: AppBar(centerTitle: true,
+        title: Text('Recyclability Assesment'),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(height: 2.h),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 3.w),child: TextFieldGemini(controller: _makeYearController, labeltext: 'Make Year')),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: TextFieldGemini(
+                controller: _makeYearController,
+                labeltext: 'Make Year',
+              ),
+            ),
             SizedBox(height: 2.h),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 3.w) ,child: TextFieldGemini(controller: _modelNumberController, labeltext: 'Model Name')),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: TextFieldGemini(
+                controller: _modelNumberController,
+                labeltext: 'Model Name',
+              ),
+            ),
             SizedBox(height: 2.h),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 3.w),child: TextFieldGemini(controller: _conditionController, labeltext: 'Condition')),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: TextFieldGemini(
+                controller: _conditionController,
+                labeltext: 'Condition',
+              ),
+            ),
             SizedBox(height: 2.h),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 3.w),child: TextFieldGemini(controller: _workingController, labeltext: 'Working (Yes or No)')),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: TextFieldGemini(
+                controller: _workingController,
+                labeltext: 'Working (Yes or No)',
+              ),
+            ),
             SizedBox(height: 2.h),
             Center(
               child: Button(
@@ -75,7 +107,30 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
               ),
             ),
             const SizedBox(height: 20),
-            Padding(padding: EdgeInsets.symmetric(horizontal: 3.w),child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.grey.shade800),child: Center(child: Padding(padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),child: Text(_response, style: TextStyle(color: Colors.white),))))),
+            // Conditionally show the container when a response is available or during loading
+            if (_response.isNotEmpty)
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 3.w),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.grey.shade400,
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
+                      child: Text(
+                        _response,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12.sp,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
@@ -85,18 +140,24 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
 
 class TextFieldGemini extends StatelessWidget {
   TextEditingController controller;
-  String labeltext ;
-  TextFieldGemini({required this.controller, required this.labeltext,super.key});
+  String labeltext;
+  TextFieldGemini({required this.controller, required this.labeltext, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.grey.shade200),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.grey.shade200,
+      ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 3.w),
         child: TextField(
           controller: controller,
-          decoration: InputDecoration(labelText: labeltext, border: InputBorder.none),
+          decoration: InputDecoration(
+            labelText: labeltext,
+            border: InputBorder.none,
+          ),
         ),
       ),
     );
