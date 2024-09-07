@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rejunx/homepage.dart';
+import 'package:sizer/sizer.dart';
+import 'package:rejunx/Login.dart';
+import 'package:rejunx/Splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,16 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ReJunx',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
-        useMaterial3: true,
-      ),
-      home: Homepage()
+    return Sizer( // Wrap MaterialApp in Sizer
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'ReJunx',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: const Splash(), // Start with the splash screen
+        );
+      },
     );
   }
 }
