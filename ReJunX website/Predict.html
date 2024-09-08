@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-image: url('images/Australia Post launches e-waste post back service (1).jpeg'); /* Set the background image */
+          background-color: rgba(128, 128, 128, 0.5); /* Add a grayish shade over the image */
+          background-blend-mode: multiply; /* Blend the image and shade */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+          padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 5px;
+            background-color: #FAF9F6;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #2AB6C7;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font:bold;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #2ab6c7;
+            border-color: rgb(0, 73, 83);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="header">
+            <h2>E-Waste Price Prediction System</h2>
+        </div>
+        <form action="/predict" method="POST">
+            <h4 class="text-center mt-4">Get Your Price Estimation</h4>
+            <p class="text-center">Please enter the information of the Component:</p>
+            
+            <div class="form-group">
+              <label class="form-label">Component:</label>
+              <select name="component" class="form-control" required>
+                <option value="Smartphone Battery">Smartphone Battery</option>
+                <option value="Laptop Screen">Laptop Screen</option>
+                <option value="Hard Disk Drive">Hard Disk Drive</option>
+                <option value="LED Monitor">LED Monitor</option>
+                <option value="Power Supply Unit">Power Supply Unit</option>
+                <option value="DVD Drive">DVD Drive</option>
+                <option value="Graphics Card">Graphics Card</option>
+                <option value="Motherboard">Motherboard</option>
+                <option value="Keyboard">Keyboard</option>
+                <option value="RAM Module">RAM Module</option>
+                <option value="CPU">CPU</option>
+                <option value="Printer">Printer</option>
+                <option value="Router">Router</option>
+                <option value="Modem">Modem</option>
+                <option value="Smartwatch">Smartwatch</option>
+                <option value="Tablet Screen">Tablet Screen</option>
+                <option value="Smart Speaker">Smart Speaker</option>
+                <option value="Wi-Fi Adapter">Wi-Fi Adapter</option>
+                <option value="External Hard Drive">External Hard Drive</option>
+                <option value="USB Flash Drive">USB Flash Drive</option>
+                <option value="Bluetooth Headset">Bluetooth Headset</option>
+                <option value="Electric Kettle">Electric Kettle</option>
+                <option value="Digital Camera">Digital Camera</option>
+                <option value="Gaming Console">Gaming Console</option>
+                <option value="Smart TV">Smart TV</option>
+                <option value="Power Bank">Power Bank</option>
+                <option value="Home Assistant">Home Assistant</option>
+                <option value="Wireless Charger">Wireless Charger</option>
+                <option value="Smart Light Bulb">Smart Light Bulb</option>
+                <option value="Fitness Tracker">Fitness Tracker</option>
+                <option value="Smart Thermostat">Smart Thermostat</option>
+                <option value="VR Headset">VR Headset</option>
+                <option value="Dash Cam">Dash Cam</option>
+                <option value="Electric Scooter Battery">Electric Scooter Battery</option>
+                <option value="3D Printer">3D Printer</option>
+                <option value="Portable Projector">Portable Projector</option>
+                <option value="Smart Doorbell">Smart Doorbell</option>
+                <option value="E-Reader">E-Reader</option>
+                <option value="Drone">Drone</option>
+                <option value="Robot Vacuum">Robot Vacuum</option>
+                <option value="Portable Speaker">Portable Speaker</option>
+                <option value="Smart Lock">Smart Lock</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Manufacturing Year of the Component:</label>
+              <input type=" text " name="manufacturing_year" class="form-control" min="1950" max="2024" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Weight of the Component in Grams:</label>
+              <input type="text" name="weight" class="form-control" min="10" max="15000" required>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary btn-block">Get Result</button>
+        </form>
+    </div>
+
+</body>
+</html>

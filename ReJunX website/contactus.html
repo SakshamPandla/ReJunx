@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+          href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact us Page</title>
+    <link rel="icon" href="images/ReJunx (6).png" type="image/jpeg">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <!-- Insert logo image inside the anchor tag -->
+        <a href="index.html" class="logo">
+            <img src="images/ReJunx (6).png" alt="Logo" width="100" height="50">
+        </a>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="contactus.html"  class="active">Contact us</a></li>
+            <li><a href="Predict.html">Predict Price estimate</a></li>
+            <li><a href="">Start selling</a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- banner section  -->
+    <section class="banner">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>
+          We're here to answer any questions you may have.
+          </p>
+    </section>
+
+    <!-- Contact form -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Your Details</h2>
+            <form action="#" method="POST">
+
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="chatbot-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712029.png" alt="Chatbot Icon">
+    </div>
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                
+                <p>We are committed to reducing E-waste and promote sustainabilty. Join us in our journey to create a better plannet.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="Predict.html">Predict </a></li>
+                    <li><a href="#">Start selling</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>
+                    <span>Phone:</span> +1 (123) 456-7890<br>
+                    <span>Email:</span> rejunx@gmail.com
+                </p>
+            </div>
+            <div class="footer-section newsletter">
+                <h2>Newsletter</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; ReJunx. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="contactus.js"></script>
+</body>
+
+</html>
