@@ -112,7 +112,7 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 3.w),
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: BoxDecoration(border: Border.all(width: 0.5.w),
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.grey.shade400,
                   ),
