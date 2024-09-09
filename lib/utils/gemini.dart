@@ -24,7 +24,7 @@ class _GeminiModelChatState extends State<GeminiModelChat> {
     model = GenerativeModel(
       model: 'gemini-1.5-flash-latest',
       apiKey:
-      'AIzaSyAGLH2DMMv0TKRRiHbHD7q_pOW3cQ-0H6s', // Replace with your actual API key
+      'API_Key', // Replace with your actual API key
     );
     super.initState();
   }
